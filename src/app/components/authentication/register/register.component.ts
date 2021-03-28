@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators,FormControlName } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +16,6 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
-          title: ['', Validators.required],
           firstName: ['', Validators.required],
           lastName: ['', Validators.required],
           email: ['', [Validators.required, Validators.email]],
@@ -29,7 +28,7 @@ export class RegisterComponent implements OnInit {
 
   
   register() {
-    this.router.navigate(['/','dashboard'])
+    this.router.navigate(['/','login'])
   }
 
   // convenience getter for easy access to form fields
@@ -37,14 +36,15 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
       this.submitted = true;
-
+     
       // stop here if form is invalid
       if (this.registerForm.invalid) {
           return;
       }
-
+      console.log("this.registerForm : ",this.registerForm)
       // display form values on success
       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+      this.router.navigate(['/','login'])
   }
 
   onReset() {

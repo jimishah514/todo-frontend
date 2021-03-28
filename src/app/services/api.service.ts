@@ -31,7 +31,7 @@ export class ApiService {
   getTodos() {
     debugger
     try {
-      return this.http.get(`${this.apiDomain}/todos`).toPromise();
+      return this.http.get(`${this.apiDomain}/todos`);
     } catch {
       throw Error;
     }

@@ -15,7 +15,9 @@ export class AppComponent {
       
     );
   //  this.api.postTodo();
-  //  this.api.getTodos();
+  //  this.api.getTodos().subscribe(res => {
+  //   console.log("todos : ",res);
+  // });
  }
 
  routerNavigator(path){

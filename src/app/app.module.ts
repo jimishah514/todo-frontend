@@ -12,11 +12,13 @@ import { DashboardComponent } from './components/home/dashboard/dashboard.compon
 import { TodoListComponent } from './components/home/todo-list/todo-list.component';
 import { TodoComponent } from './components/home/todo/todo.component';
 import { NavbarComponent } from './components/home/navbar/navbar.component';
+import { LoginComponent } from './components/authentication/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
+    LoginComponent,
     ForgotPasswordComponent,
     DashboardComponent,
     TodoListComponent,

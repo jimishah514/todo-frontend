@@ -6,12 +6,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSidenavModule, MatListModule } from '@angular/material';
+import { MatSidenavModule,MatNativeDateModule, MatToolbarModule, MatCardModule,MatRadioModule,MatListModule } from '@angular/material';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatRippleModule} from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTabsModule} from '@angular/material/tabs';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatDatepickerModule} from  '@angular/material/datepicker';
 
 @NgModule({
   declarations: [],
@@ -29,7 +30,14 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatRippleModule,
     MatCheckboxModule,
     MatTabsModule,
-    LayoutModule
+    LayoutModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatRadioModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [
     MatSnackBarModule,
@@ -44,7 +52,14 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatRippleModule,
     MatCheckboxModule,
     MatTabsModule,
-    LayoutModule
+    LayoutModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatRadioModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: []
 })

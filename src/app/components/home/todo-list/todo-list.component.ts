@@ -77,9 +77,6 @@ export class TodoListComponent implements OnInit {
       todoForm.reset();
     }
   }
-  // public hasEditTodo(task) {
-  //   this.editTodo = task;
-  // }
 
   todoChangeAction(actionObject) {
     debugger
@@ -94,7 +91,7 @@ export class TodoListComponent implements OnInit {
 
   }
   public updateTodo(task) {
-    debugger
+  
     if (task.title !== '') {
       this.todos.forEach((element: any) => {
         if (element.id === task.id) {

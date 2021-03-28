@@ -1,2 +1,13 @@
-<p>todo works!</p>
-
+<mat-checkbox *ngIf="todo.id !== editTodo.id" id="task{{todo.id}}" name="task{{todo.id}}" [checked]="todo.completed"
+    (change)="updateTodoStatus(todo)"></mat-checkbox>
+<mat-form-field class="w-100" *ngIf="todo.id === editTodo.id" appearance="fill">
+    <input matInput type="text" name="editTask" [(ngModel)]="todo.title" (focusout)="editTodo = {};"
+        (keydown.enter)="updateTodo(todo)">
+</mat-form-field>
+<p *ngIf="todo.id !== editTodo.id" [ngClass]="{'strike-text': todo.completed }" class="d-inline-flex ml-4"
+    (dblclick)="hasEditTodo(todo)">
+    {{todo.title}}</p>
+<button *ngIf="todo.id !== editTodo.id" class="float-right btn btn-sm close-btn" (click)="deleteTodo(todo)"
+    matTooltip="Delete" mat-icon-button>
+    <mat-icon>close</mat-icon>
+</button>

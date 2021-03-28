@@ -77,10 +77,24 @@ export class TodoListComponent implements OnInit {
       todoForm.reset();
     }
   }
-  public hasEditTodo(task) {
-    this.editTodo = task;
+  // public hasEditTodo(task) {
+  //   this.editTodo = task;
+  // }
+
+  todoChangeAction(actionObject) {
+    debugger
+    if(actionObject.action === 'delete') {
+      this.deleteTodo(actionObject.todo)
+    } else if(actionObject.action === 'update') {
+      this.updateTodo(actionObject.todo)
+    }else if(actionObject.action === 'updateStatus') {
+      this.updateTodoStatus(actionObject.todo)
+    }
+    
+
   }
   public updateTodo(task) {
+    debugger
     if (task.title !== '') {
       this.todos.forEach((element: any) => {
         if (element.id === task.id) {
@@ -91,8 +105,8 @@ export class TodoListComponent implements OnInit {
       });
     }
   }
-  public deleteTodo(task) {
-    const index = this.todos.indexOf(task);
+  public deleteTodo(action) {
+    const index = this.todos.indexOf(action.todo);
     this.todos.splice(index, 1);
     this.setTodos();
   }

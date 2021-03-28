@@ -9,7 +9,11 @@ import { ApiService } from './services/api.service';
 })
 export class AppComponent {
  constructor(private api: ApiService,private router: Router) {
-  //  this.api.helloWorld();
+    this.api.helloWorld().then(res =>{
+      console.log("server Response : ",res);
+    }
+      
+    );
   //  this.api.postTodo();
   //  this.api.getTodos();
  }

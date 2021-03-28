@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  //apiDomain = 'serene-citadel-01484.herokuapp.com';
-  apiDomain = 'http://localhost:8080';
+  apiDomain = 'https://todo-app-demo1.herokuapp.com';
+  //apiDomain = 'http://localhost:3000';
 
   helloWorld() {
     debugger
